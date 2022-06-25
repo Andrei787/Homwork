@@ -1,4 +1,7 @@
-﻿/*int num1, num2;
+﻿
+//Задача №2
+
+/*int num1, num2;
 Console.Write("Введите для сравнения свое первое число: ");
 num1=Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите для сравнения свое второе число: ");
@@ -16,6 +19,9 @@ if (num2>num1)
      Console.Write ("Вам точно нужна моя помощь?");
 }*/
 
+// Задача №4
+
+
 /*int num1, num2, num3;
 Console.Write("Введите для сравнения свое первое число: ");
 num1=Convert.ToInt32(Console.ReadLine());
@@ -28,6 +34,8 @@ if (num2 > num1) max=num2;
 if (num3 > num2) max=num3;
 Console.WriteLine ("Максимальное число=" +max);
 */
+
+//  Задача №6 
 
 /*int num, a;
 Console.Write("Введите для сравнения число: ");
@@ -42,7 +50,9 @@ if (a+a<num)
     Console.WriteLine(num+" "+"Не является четным числом");
 }*/
 
-int n, carrent;
+// Задача №8
+
+/* int n, carrent;
 Console.Write("Введите число для разбивки на четные числа: ");
 n=Convert.ToInt32(Console.ReadLine());
 carrent = 2;
@@ -51,4 +61,4 @@ while (carrent<=n)
 {
     Console.Write(carrent+" ");
     carrent = carrent + 2;
-}
+}*/
