@@ -41,3 +41,14 @@ if (a+a<num)
 {
     Console.WriteLine(num+" "+"Не является четным числом");
 }*/
+
+int n, carrent;
+Console.Write("Введите число для разбивки на четные числа: ");
+n=Convert.ToInt32(Console.ReadLine());
+carrent = 2;
+
+while (carrent<=n)
+{
+    Console.Write(carrent+" ");
+    carrent = carrent + 2;
+}
