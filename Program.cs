@@ -37,7 +37,7 @@ Console.WriteLine ("Максимальное число=" +max);
 
 //  Задача №6 
 
-/*int num, a;
+/*int num, a, b,c;
 Console.Write("Введите для сравнения число: ");
 num=Convert.ToInt32(Console.ReadLine());
 a=num/2;
@@ -48,6 +48,13 @@ if (a+a==num)
 if (a+a<num)
 {
     Console.WriteLine(num+" "+"Не является четным числом");
+}
+b=0;
+if (num < 0) b=num * -1;
+c=b/2;
+if (c+c < b)
+{
+     Console.WriteLine(num+" "+"Не является четным числом");
 }*/
 
 // Задача №8
