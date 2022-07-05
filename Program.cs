@@ -1,65 +1,39 @@
-﻿// Задача №10
-/*int CutNuber()
-{
-    int num = new Random().Next(100,1000);
-    Console.WriteLine("Случайное трехзначное число"+" "+num);
+﻿// Задача №19
+/*void Palindrome ( int number)
+{   
+    int number1 = number / 10000;
+    int number4  = number % 10;
+    int number2 = (number / 1000) % 10;
+    int number3 = number % 100 / 10;
     
-    int des = num % 100; 
-    int result = des / 10;
-
-    return result;
-
-}
-int number = CutNuber();
-Console.WriteLine("Вторая цифра"+" " + number);
-*/
-
-//Задача №13
-/*void ThirdNumber (int num)
-{
-    if (num <=0)
-    num = num * -1;
-    if (num >= 100) 
-    {int  quantity = 0;
-    int x = num;
-    while (x>0)
-    {
-    x = x/10;
-    quantity++;
-    }
-    int b = Convert.ToInt32(Math.Pow (10,(quantity-3)));
-    int number1 = num /b;
-    int  c = number1 % 10;
-    Console.WriteLine("Третий знак Вашего числа"+" " + c);
-    }
+    if (number1==number4 && number2==number3)
+    Console.WriteLine (number +  " " + "Данное число является палиндромом");
     else
+    Console.WriteLine (number + " " +  "Данное число не является пландромом");
+    
+}
+Console.WriteLine("Введите пятизначное число");
+int number = Convert.ToInt32(Console.ReadLine());
+if (number < 10000 || number > 99999) 
+    Console.WriteLine (number +  " " + "Данное число не является пятизначным");
+else
+Palindrome (number);*/
+
+// Задача №23
+/*void  TableСubes ( int number)
+{   
+    int counter = 1; 
+    while (counter <= number)
     {
-         Console.WriteLine("Третьего знака нет");
+        int cubes = Convert.ToInt32(Math.Pow (counter,3));
+        Console.Write(cubes + " ");
+        counter++;
     }
+    
 }
-Console.Write("Введите любое число"+" ");
-int num=Convert.ToInt32(Console.ReadLine());
-ThirdNumber (num);
-*/
-
-// Задача №15
-/*void WeekDay (int day)
-{
-    if(day >=1 && day<=7)
-    {   if (day==1) Console.WriteLine("Данный день являетя рабочим");
-        if (day==2) Console.WriteLine("Данный день являетя рабочим");
-        if (day==3) Console.WriteLine("Данный день являетя рабочим");
-        if (day==4) Console.WriteLine("Данный день являетя рабочим");
-        if (day==5) Console.WriteLine("Данный день являетя рабочим");
-        if (day==6) Console.WriteLine("Данный день являетя выходным");
-        if (day==7) Console.WriteLine("Данный день являетя выходным");
-    }
-    else 
-    Console.WriteLine("Ваше число НЕ коректно!!!");
-}
-
-Console.Write("Введите день недели"+" ");
-int nam=Convert.ToInt32(Console.ReadLine());    
-
-WeekDay(nam);
-*/
+Console.Write("Введите Ваше положительное число"+ " ");
+int number = Convert.ToInt32(Console.ReadLine());
+if (number <=0)
+    Console.WriteLine (number +  " " + "Данное число не является положительным");
+else    
+TableСubes (number);*/
