@@ -1,39 +1,31 @@
-﻿// Задача №19
-/*void Palindrome ( int number)
-{   
-    int number1 = number / 10000;
-    int number4  = number % 10;
-    int number2 = (number / 1000) % 10;
-    int number3 = number % 100 / 10;
-    
-    if (number1==number4 && number2==number3)
-    Console.WriteLine (number +  " " + "Данное число является палиндромом");
-    else
-    Console.WriteLine (number + " " +  "Данное число не является пландромом");
-    
-}
-Console.WriteLine("Введите пятизначное число");
-int number = Convert.ToInt32(Console.ReadLine());
-if (number < 10000 || number > 99999) 
-    Console.WriteLine (number +  " " + "Данное число не является пятизначным");
-else
-Palindrome (number);*/
-
-// Задача №23
-/*void  TableСubes ( int number)
-{   
-    int counter = 1; 
-    while (counter <= number)
+﻿// Задача №27
+/*int SummaNumbers (int a)
+  { 
+    if (a < 0) a = a * -1;
+    int result = 0;
+    int number1 = 0;
+    while (a>0)
     {
-        int cubes = Convert.ToInt32(Math.Pow (counter,3));
-        Console.Write(cubes + " ");
-        counter++;
+        number1= a % 10;
+        result = number1 + result;
+        a = a / 10;
     }
-    
+    return result;
+  }
+Console.WriteLine("Введите число");
+int num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"Сумма цифр в числе {num} равна {SummaNumbers(num)}");*/
+
+// Задача №29
+/*void ArrayNumbers (int a)
+{
+    for(int carent = 1; carent<=a; carent++)
+    Console.Write(new Random().Next(0,1000)+" ");
 }
-Console.Write("Введите Ваше положительное число"+ " ");
-int number = Convert.ToInt32(Console.ReadLine());
-if (number <=0)
-    Console.WriteLine (number +  " " + "Данное число не является положительным");
-else    
-TableСubes (number);*/
+Console.WriteLine("Введите положительное число которое задаст Ваш массив");
+int num = Convert.ToInt32(Console.ReadLine());
+if (num <=0 )
+  Console.WriteLine ($"{num} это число не является положительным");
+else  
+ArrayNumbers(num);*/
+
