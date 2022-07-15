@@ -8,7 +8,7 @@
     return newArray;
 }*/
 
-/* int[] CreateArray (int size)
+/*int[] CreateArray (int size)
 {
     int[] newArray = new int [size];
     Console.WriteLine("Creating array here:");
@@ -31,69 +31,38 @@
   Console.WriteLine();
 }*/
 
-
-/*int EvenNumbers(int[] array) // Метод к задаче №34
+/*int GreaterZero (int [] array)  // Метод к задаче 41
 {
-    int count = 0;
-    for(int i = 0; i < array.Length; i++)
-      if (array[i] % 2==0) count ++;
-    return count; 
-}  */
-
-/*int OddNumbers(int[] array)   //Метод к задаче №36
-{     
     int sum = 0;
-    for( int i = 1; i < array.Length; i=i+2)
-    sum = sum + array[i];
+    for (int i=0; i < array.Length; i++)
+    {
+       if (array[i] > 0) sum++; 
+    }
     return sum;
-} /*
+}*/
 
-/*Console.Write("Input size of arrey:");  //Задача №34
-int size = Convert.ToInt32(Console.ReadLine());
-int min = 100; 
-int max = 999; 
-int[] array = CreateRandomArray(size, min, max);
+/*Console.Write("Input size of arrey:");  //Задача 41
+int size = Convert.ToInt32(Console.ReadLine()); 
+int[] array = CreateArray(size);
 ShowArray(array);
-Console.WriteLine("Количество четных чисел в массиве" + " " + EvenNumbers(array));*/
+Console.WriteLine("Количество элементов больше нуля"+ " "+ GreaterZero(array));*/
 
-
-/*Console.Write("Input size of arrey:");    //Задача №36
-int size = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input min possible value of elements:");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input max possible value of elements:");
-int max = Convert.ToInt32(Console.ReadLine());
-int[] array = CreateRandomArray(size, min, max);
-ShowArray(array);
-Console.WriteLine("Сумма элементов стоящие на нечетных позициях" + " " + OddNumbers(array));*/
-
-/* Console.Write("Input size of arrey:");   // Задача №38
-int size = Convert.ToInt32(Console.ReadLine());
-double[] DoubleArrey = new double[size];
-Random random = new Random();
-for (int i = 0; i < DoubleArrey.Length; i++)
+/*Console.Write("Введите элемент b1"+ " "); // Задача №43
+int b1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите элемент b2"+ " ");
+int b2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите элемент k1"+" ");
+int k1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите элемент k2"+" ");
+int k2 = Convert.ToInt32(Console.ReadLine());
+if (k1==k2 && b1==b2) Console.Write("Прямые паралельны точек сопрекосновения нет");
+else
 {
-    
-        DoubleArrey[i] = random.NextDouble(); 
-    Console.WriteLine(DoubleArrey[i]);
-}
-double max = 0;
-double min = 0; 
-if (DoubleArrey[0] > DoubleArrey[1])
-{
-  max = DoubleArrey[0]; 
-  min = DoubleArrey[1];
-}
-if (DoubleArrey[0] < DoubleArrey[1])
-{
-  min = DoubleArrey[0];
-  max = DoubleArrey[1];
-}
-for( int i = 2; i < DoubleArrey.Length; i++)
-{
-if (DoubleArrey[i] > max) DoubleArrey[i] = max;
-if (DoubleArrey[i] < min) DoubleArrey[i] = min;
-}
-double s =  max -  min;
-
-Console.WriteLine("Разница между максимальным и минимальным значением" +  " "+ s);*/
+double x = 0; 
+double y = 0;
+double k = k1 - k2;
+double b = b2 - b1;
+x = b / k;
+y = x;
+Console.WriteLine($"Точка пересечения прямых ({x};{y})");
+}*/
