@@ -1,68 +1,105 @@
-﻿/*int[] CreateRandomArray(int size, int minValue, int maxValue)
+﻿int[,] CreateRandom2dArrey(int rows, int columns, int minValue, int maxValue)
 {
-    int[] newArray = new int [size];
+    int[,] newArray = new int [rows, columns];
+    for (int i = 0; i < rows; i++)
+      for (int j = 0; j < columns; j++)
 
-    for(int i=0; i < size; i++) 
-     newArray[i] = new Random().Next(minValue, maxValue+1);
-
+          newArray[i,j] = new Random(). Next(minValue, maxValue+1);
     return newArray;
-}*/
+} 
 
-/*int[] CreateArray (int size)
+void Show2dArray (int [,] array)
 {
-    int[] newArray = new int [size];
-    Console.WriteLine("Creating array here:");
-    for(int i=0; i < size; i++) 
+    for(int i = 0; i < array.GetLength(0); i++)
     {
-      Console.Write($"Input {i+1} element:");
-      newArray[i] = Convert.ToInt32(Console.ReadLine());
+        for(int j = 0; j < array.GetLength(1); j++)
+        Console.Write(array[i,j] + " ");
 
+        Console.WriteLine();
     }
-    Console.WriteLine();
+}
+
+/*void DoubleShow2dArray (double [,] array) //Массив к задаче №47
+{
+    for(int i = 0; i < array.GetLength(0); i++)
+    {
+        for(int j = 0; j < array.GetLength(1); j++)
+        Console.Write(array[i,j] + " ");
+
+        Console.WriteLine();
+    }
+}
+*/
+
+
+/*double[,] Double2dArrey(int rows, int columns) //Массив к задаче №47
+{
+    double[,] newArray = new double [rows, columns];
+    for (int i = 0; i < rows; i++)
+
+    for (int j = 0; j < columns; j++)
+    {
+    newArray[i,j] = new Random(). NextDouble();
+    }
     return newArray;
+} 
+*/
+/*void Array (int [,] AverageColumn) //Массив к задаче №52
+{
+        for (int i = 0; i < AverageColumn.GetLength(0); i++)
+        {   
+        for (int j = 0; j < AverageColumn.GetLength(1); j++)
+        if (j==v) 
+        x = x + AverageColumn[i,j];
+        }
+        x = x/n;
+        Console.WriteLine($"Средняя {v+1} столбца {x}");
+        x=0;  
+        v++;
+}
+*/
+
+/*
+Console.Write("Input number of rows: "); //Задача №47
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input number of columns: ");
+int n =  Convert.ToInt32(Console.ReadLine());
+double [,] myArray = Double2dArrey (m, n);
+DoubleShow2dArray(myArray);*/
+
+/*Console.Write("Input number of rows: "); //Задача 50
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input number of columns: ");
+int n =  Convert.ToInt32(Console.ReadLine());
+Console.Write("Input min possible value: "); 
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input max possible value: ");
+int max =  Convert.ToInt32(Console.ReadLine());
+Console.Write("Укажите строку числа в массиве? ");
+int i = Convert.ToInt32(Console.ReadLine());
+Console.Write("Укажите столбец числа в массиве? ");
+int j = Convert.ToInt32(Console.ReadLine());
+int [,] myArray = CreateRandom2dArrey(m, n, min, max);
+Show2dArray(myArray); 
+if (i > m || j > n) Console.Write($"Данного адреса в массиве нет {i},{j} ");
+else
+Console.Write($"Данное число {myArray[i-1,j-1]} ");*/
+
+/* Console.Write("Input number of rows: "); //Задача 52
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input number of columns: ");
+int n =  Convert.ToInt32(Console.ReadLine());
+Console.Write("Input min possible value: "); 
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input max possible value: ");
+int max =  Convert.ToInt32(Console.ReadLine());
+int [,] AverageColumn = CreateRandom2dArrey(m, n, min, max);
+Show2dArray(AverageColumn); 
+double x = 0;
+int v=0;
+Array(AverageColumn);
+while (v < n)
+{
+  Array(AverageColumn);
 
 } */
-
-/*void ShowArray (int[] array)
-{
-  for(int i=0; i < array.Length; i++)
-  Console.Write(array[i] + " ");
-
-  Console.WriteLine();
-}*/
-
-/*int GreaterZero (int [] array)  // Метод к задаче 41
-{
-    int sum = 0;
-    for (int i=0; i < array.Length; i++)
-    {
-       if (array[i] > 0) sum++; 
-    }
-    return sum;
-}*/
-
-/*Console.Write("Input size of arrey:");  //Задача 41
-int size = Convert.ToInt32(Console.ReadLine()); 
-int[] array = CreateArray(size);
-ShowArray(array);
-Console.WriteLine("Количество элементов больше нуля"+ " "+ GreaterZero(array));*/
-
-/*Console.Write("Введите элемент b1"+ " "); // Задача №43
-int b1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите элемент b2"+ " ");
-int b2 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите элемент k1"+" ");
-int k1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите элемент k2"+" ");
-int k2 = Convert.ToInt32(Console.ReadLine());
-if (k1==k2 && b1==b2) Console.Write("Прямые паралельны точек сопрекосновения нет");
-else
-{
-double x = 0; 
-double y = 0;
-double k = k1 - k2;
-double b = b2 - b1;
-x = b / k;
-y = x;
-Console.WriteLine($"Точка пересечения прямых ({x};{y})");
-}*/
